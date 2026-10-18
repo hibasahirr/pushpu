@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100713">
+  <title>Cousin.exe | Poovu's Official Roast File</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="#" id="brandHome">👑 Cousin.exe <small>ROAST • PLAY • LOVE</small></a>
+    <div class="progress"><span id="stepText">CASE FILE 01 / 06</span><div class="progress-track"><div id="stepBar"></div></div></div>
+  </nav>
+
+  <main>
+    <section class="page active hero" data-page="0">
+      <div class="tape">⚠ FAMILY CRIME SCENE ⚠</div>
+      <div class="hero-photo photo-frame">
+        <img src="photos/poovu-main.jpg" alt="Poovu" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="photo-placeholder">📸<br><b>POOVU</b><small>Add poovu-main.jpg</small></div>
+        <span class="photo-label">POOVU 💗</span>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">THE FAMILY INVESTIGATION BUREAU PRESENTS</p>
+        <h1>OH NO…<br>IT'S <span>POOVU!</span></h1>
+        <h2>THE FAMILY'S MOST WANTED TROUBLEMAKER.</h2>
+        <p>Too cute to be innocent. Too chaotic to be trusted. And somehow still everyone's favourite. 👀</p>
+        <div class="hero-sticker sticker-one">🚨 WANTED 🚨<br><small>for being too dramatic</small></div>
+        <div class="hero-sticker sticker-two">Certified<br>cutie menace 😈</div>
+        <button class="big-button next-page">EXPOSE ME THEN ➜</button>
+      </div>
+      <p class="page-note">CASE FILE #POOVU-001 • HANDLE WITH SNACKS 🍟</p>
+    </section>
+
+    <section class="page light-page" data-page="1">
+      <div class="eyebrow">ROUND 01 • DETECTIVE MODE</div>
+      <h1>🔎 Guess That Cousin</h1>
+      <p class="intro">One is Poovu. Four are random animal imposters. Tap the real legend!</p>
+      <div class="photo-grid" id="photoGrid">
+        <button class="guess-card" data-answer="true"><img src="photos/poovu-main.jpg" alt="Mystery picture 1"><span>01</span></button>
+        <button class="guess-card" data-answer="false"><img src="photos/animal-cat.jpg" alt="Mystery picture 2"><span>02</span></button>
+        <button class="guess-card" data-answer="false"><img src="photos/animal-llama.jpg" alt="Mystery picture 3"><span>03</span></button>
+        <button class="guess-card" data-answer="false"><img src="photos/animal-duck.jpg" alt="Mystery picture 4"><span>04</span></button>
+        <button class="guess-card" data-answer="false"><img src="photos/animal-cat2.jpg" alt="Mystery picture 5"><span>05</span></button>
+      </div>
+      <div class="feedback" id="guessFeedback">🕵️ Your mission: identify Poovu!</div>
+      <div class="reaction" id="reaction"><img id="reactionImage" src="photos/poovu-funny.png" alt="Poovu reaction"><p id="reactionText"></p></div>
+      <div class="button-row"><button class="secondary-button" id="resetGuess">Try again ↻</button><button class="big-button next-page" id="guessNext" disabled>Next: Expose Her Personality ➜</button></div>
+    </section>
+
+    <section class="page quiz-page" data-page="2">
+      <div class="eyebrow">ROUND 02 • ABSOLUTELY UNOFFICIAL SCIENCE</div>
+      <h1>🧠 The Personality Exposer</h1>
+      <p class="intro">Answer five highly scientific questions to discover Poovu's fictional cousin classification.</p>
+      <div class="quiz-card">
+        <div class="quiz-progress"><div id="quizProgress"></div></div>
+        <div id="quizArea"><h2 id="questionText"></h2><div id="answerOptions" class="answer-options"></div><button class="big-button" id="nextQuestion" disabled>Next question ➜</button></div>
+        <div id="quizResult" class="quiz-result" hidden></div>
+        <button class="big-button" id="quizNext" hidden>Next: The Roast Wheel 🎡 ➜</button>
+        <button class="secondary-button" id="restartQuiz" hidden>Retake quiz ↻</button>
+      </div>
+    </section>
+
+    <section class="page wheel-page" data-page="3">
+      <div class="eyebrow">ROUND 03 • TOP SECRET HEART FILE</div>
+      <h1>🎡 Spin the Roast Wheel</h1>
+      <h2>THE PERSON CLOSE TO MY HEART 💗</h2>
+      <div class="wheel-layout">
+        <div class="heart-photo photo-frame"><img src="photos/poovu-main.jpg" alt="Poovu"><span class="photo-label">MY HEART 💗</span></div>
+        <div class="wheel-game">
+          <div class="pointer">▼</div>
+          <div class="wheel" id="wheelGraphic">
+            <span class="wheel-name n1">Lulu</span><span class="wheel-name n2">Zaya</span>
+            <span class="wheel-name n3">Minnnu</span><span class="wheel-name n4">Nafi</span>
+            <span class="wheel-name n5">Huda</span><span class="wheel-name n6">Minhaj</span>
+            <div class="wheel-center">SPIN!</div>
+          </div>
+          <button class="big-button" id="spinBtn">SPIN THE WHEEL 🎡</button>
+          <p id="wheelResult" class="wheel-result">Who is it going to be? 🤔</p>
+        </div>
+      </div>
+      <div class="button-row"><button class="secondary-button prev-page">← Back</button><button class="big-button next-page" id="wheelNext" disabled>Next: One Last Secret 💌 ➜</button></div>
+    </section>
+
+    <section class="page heart-page" data-page="4">
+      <div class="eyebrow">CONFIDENTIAL • DO NOT TELL POOVU (SHE KNOWS)</div>
+      <h1>One last little secret…</h1>
+      <p class="intro">Tap the beating heart. If you dare. 💓</p>
+      <button id="heartButton" class="heart-button"><span class="heartbeat">💗</span><span>OPEN MY HEART</span></button>
+      <div id="heartReveal" class="heart-reveal" hidden>
+        <p>THE PERSON WHO STOLE POOVU'S HEART IS…</p><h2>💘 MINHAJ 💘</h2>
+        <p>CASE CLOSED. EVERYONE ACT NORMAL. 😭</p>
+        <div class="music-box"><div class="music-icon">♫</div><div><b>Radhimaa</b><small id="musicStatus">Opening the heart… Radhimaa is ready 💗</small></div>
+          <audio id="radhimaaAudio" controls preload="auto"><source src="photos/radhimaa.mp3" type="audio/mpeg">Your browser does not support audio.</audio>
+        </div>
+      </div>
+      <div class="button-row"><button class="secondary-button prev-page">← Back</button><button class="big-button next-page" id="heartNext" disabled>Meet the Editors 👑 ➜</button></div>
+    </section>
+
+    <audio id="editorAudio" preload="auto"><source src="photos/editor-song.mp3" type="audio/mpeg"></audio>
+    <section class="page editors-page" data-page="5">
+      <div class="eyebrow">THE PEOPLE BEHIND THIS NONSENSE</div>
+      <h1>👑 Meet the Editors 👑</h1>
+      <p class="intro">We came. We saw. We roasted. We made a whole website about it.</p>
+      <div class="editor-grid">
+        <button class="editor-card" data-editor="hiba"><img src="photos/hiba.jpg" alt="Hiba" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="placeholder">📸<br>hiba.jpg</span><b>HIBA 💅</b><small>Looks innocent. Has screenshots.</small></button>
+        <button class="editor-card" data-editor="zaya"><img src="photos/zaya.jpg" alt="Zaya" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="placeholder">📸<br>zaya.jpg</span><b>ZAYA 😎</b><small>Professional instigator. Zero regrets.</small></button>
+      </div>
+      <p id="editorPop" class="editor-pop">Tap a photo for its official roast. 👀</p>
+      <button class="big-button" id="replayBtn">REPLAY THE WHOLE INVESTIGATION ↻</button>
+    </section>
+  </main>
+  <footer>💗 Made with love, questionable decisions, and a lot of cousin teasing. — Cousin.exe</footer>
+  <script src="script.js"></script>
+</body>
+</html>
